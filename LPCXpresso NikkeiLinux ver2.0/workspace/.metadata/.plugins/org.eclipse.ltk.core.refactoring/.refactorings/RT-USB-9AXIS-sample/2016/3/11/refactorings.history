@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;RT-USB-9AXIS-sample/src/MODE/mode_outputSelect.h&apos; to &apos;mode_outputSelect.c&apos;" description="Rename resource &apos;mode_outputSelect.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/MODE/mode_outputSelect.h" name="mode_outputSelect.c" stamp="1457398071577" updateReferences="true"/>
-</session>
