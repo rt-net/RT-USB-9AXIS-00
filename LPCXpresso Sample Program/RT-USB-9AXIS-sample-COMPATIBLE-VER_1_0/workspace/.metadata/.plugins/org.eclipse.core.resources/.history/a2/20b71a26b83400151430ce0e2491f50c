@@ -1,0 +1,104 @@
+/* ------------------------------------------------------------ *
+File main.c
+
+RT-AICHIPのサンプルプログラム
+* ------------------------------------------------------------ */
+
+//OHTER
+#include "LPC13xx.h"
+#include "core_cm3.h"
+#include "type.h"
+//PERIHERAL
+#include "ad.h"
+#include "debug.h"
+#include "i2c.h"
+#include "io.h"
+#include "pwm.h"
+//#include "ssp.h"
+#include "SystemTickTimer.h"
+#include "timer.h"
+#include "usbTransmission.h"
+#include "uart.h"
+//AICHIP
+#include "AICHIPFunction.h"
+#include "mpu9150.h"
+#include "UserInterface.h"
+//MODE
+#include "modeSelect.h"
+//USB
+#include "usb.h"
+#include "usbcfg.h"
+#include "usbhw.h"
+#include "usbcore.h"
+#include "cdc.h"
+#include "cdcuser.h"
+
+/////////////////
+//プロトタイプ宣言
+void init(void);
+/////////////////
+
+int main (void)
+{
+	init();
+/*
+	LPC_GPIO1->DATA |=   0x0800;
+	//各種ペリフェラルおよびモジュールの初期化
+	LPC_IOCON->PIO1_9  = 0x000;
+	LPC_GPIO1->DIR    |= 0x0200;
+	LPC_GPIO1->DATA   |= 0x0200;
+	//モーターの正転/負転切り替え MOT_CW_CCW
+	LPC_IOCON->PIO0_7  = 0x0000;
+	LPC_GPIO0->DIR    |= 0x0080;
+	LPC_GPIO0->DATA   &= ~0x0080;
+
+	while(1);
+*/
+
+	tryUSBConnect();        //USB接続を試みる
+	if(isUSBConfig() == 1) flashRedLED(300,300);//USBの接続使用
+	else flashRedLED(100,100); //USBの接続不使用
+	setSendDataEnable(1);
+
+	while(1) //Infinite loop
+	{
+		modeSelect();     //モード選択を実行
+	};
+
+	return 0;
+}
+
+
+
+void init(void)
+{
+	//IOポートの初期化
+	initIO();
+	//LEDを一回だけ点滅させる
+	turnRedLED(1);
+	turnGreenLED(1);
+	wait1msec(500);
+	turnRedLED(0);
+	turnGreenLED(0);
+	wait1msec(500);
+	//各ペリフェラルの初期化
+	USBIOClkConfig();
+	initTimer32_0();
+	initTimer32_1();
+	Init_ad();
+	//SSPInit();
+	USB_Init();
+	UARTInit(115200);
+	while (!I2CInit((uint32_t)I2CMASTER)); // I2Cの初期化が終わるまで待つ
+	//9軸センサの初期化
+	initMPU6050();
+	initAK8975();
+	initOmegaRef();  //ジャイロのリファレンスを取得
+	//UIの初期化
+	initUI();
+	initAICHIP();
+}
+
+/******************************************************************************
+**                            End Of File
+******************************************************************************/

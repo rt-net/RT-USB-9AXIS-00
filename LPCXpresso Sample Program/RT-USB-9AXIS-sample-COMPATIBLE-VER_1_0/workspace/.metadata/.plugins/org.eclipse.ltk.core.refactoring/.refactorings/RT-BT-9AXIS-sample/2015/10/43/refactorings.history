@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;RT-BT-9AXIS-sample/inc/MAIN/mpu9150.h&apos; to &apos;mpu9250.h&apos;" description="Rename resource &apos;mpu9150.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="inc/MAIN/mpu9150.h" name="mpu9250.h" stamp="1445296807198" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;RT-BT-9AXIS-sample/src/MAIN/mpu9150.c&apos; to &apos;mpu9250.c&apos;" description="Rename resource &apos;mpu9150.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/MAIN/mpu9150.c" name="mpu9250.c" stamp="1445296821053" updateReferences="true"/>
+</session>

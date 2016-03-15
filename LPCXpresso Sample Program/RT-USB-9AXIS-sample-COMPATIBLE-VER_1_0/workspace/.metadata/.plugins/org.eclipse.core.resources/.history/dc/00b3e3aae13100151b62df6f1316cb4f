@@ -1,0 +1,60 @@
+/* ------------------------------------------------------------ *
+File mode_selectDuty.c
+
+duty　maxで走らせるモード
+
+操作:
+     右SW: モータのdutyを変更
+     左SW: 長押しでモード選択へ繊維
+
+* ------------------------------------------------------------ */
+#include "mode_selectDuty.h"
+#include "type.h"
+#include "AICHIPFunction.h"
+#include "UserInterface.h"
+#include "SystemTickTimer.h"
+#include "debug.h"
+
+
+void mode_selectDuty(void)
+{
+	int8_t motor_duty = 0;   //duty 0から100%まで1%刻み
+
+	myPrintfUART("############ duty select mode ################\n");
+	myPrintfUART("++++++++++++++++++++++++++++++++\n");
+	myPrintfUART("  Right  SW: change motor duty .\n");
+	myPrintfUART("  Left   SW: mode select .\n");
+	myPrintfUART("++++++++++++++++++++++++++++++++\n");
+
+	while(1)
+	{
+		if(getRightSWcount() > 1000 ) wait1msec(100);
+		else wait1msec(1);
+
+		//右SWでモータの状態を切り替え
+		if( getRightSWcount() == 3 || getRightSWcount() > 1000)
+		{
+			motor_duty ++;
+			if(motor_duty > 100) motor_duty = -100;
+			//motor_duty = motor_duty %101;
+			myPrintfUART("\t motor duty: %d % \n",motor_duty);
+			//モーターのdutyを変える
+			setDutyMotor( (float)(motor_duty)*0.01);
+			flashGreenLED(motor_duty,100 - motor_duty);
+		}
+
+
+		//モード選択へ遷移
+		if( getLeftSWcount() == 1000)
+		{
+			setDutyMotor(0.0);
+			turnGreenLED(0);
+			myPrintfUART("\t return mode select \n");
+			break;
+		}
+	}
+}
+
+/******************************************************************************
+**                            End Of File
+******************************************************************************/
