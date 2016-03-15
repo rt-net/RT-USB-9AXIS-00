@@ -1,0 +1,43 @@
+/* ------------------------------------------------------------ *
+File mode_controlRun.c
+
+コースの状況に応じてモーターのdutyを変えながら走るモード
+
+操作:
+     右SW: スタート,ストップの切り替え
+     左SW: 長押しでモード選択へ繊維
+
+* ------------------------------------------------------------ */
+#include "mode_Debug.h"
+#include "type.h"
+#include "AICHIPFunction.h"
+#include "UserInterface.h"
+#include "SystemTickTimer.h"
+#include "debug.h"
+
+
+void mode_controlRun(void)
+{
+	turnGreenLED(1);
+	myPrintfUART("############ control run mode ################\n");
+	wait1msec(1000);
+
+	while(1)
+	{
+		wait1msec(100);
+
+
+		//モード選択へ遷移
+		if( getLeftSWcount() > 1000)
+		{
+			setDutyMotor(0.0);
+			turnGreenLED(0);
+			myPrintfUART("\t return mode select \n");
+			break;
+		}
+	}
+}
+
+/******************************************************************************
+**                            End Of File
+******************************************************************************/
