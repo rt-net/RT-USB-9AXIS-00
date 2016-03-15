@@ -1,8 +1,0 @@
-1456811323588	Rename resource 'Copy of RT-BT-9AXIS-sample'
-1456811344294	Delete resource 'RT-USB-9AXIS-sample/Debug/RT-BT-9AXIS-sample.axf'
-1456811346923	Delete resource 'RT-USB-9AXIS-sample/Debug/RT-BLUETOOTH-9AXIS-sample_Debug_lib.ld'
-1456811349839	Delete resource 'RT-USB-9AXIS-sample/Debug/RT-BLUETOOTH-9AXIS-sample_Debug_mem.ld'
-1456811355124	Delete resource 'RT-USB-9AXIS-sample/Debug/RT-BT-9AXIS-sample.map'
-1456811357119	Delete resource 'RT-USB-9AXIS-sample/Debug/RT-BT-9AXIS-sample.bin'
-1456811366278	Delete resource 'RT-USB-9AXIS-sample/Debug/RT-BLUETOOTH-9AXIS-sample_Debug.ld'
-1457066317722	Delete resource 'RT-USB-9AXIS-sample/inc/MODE/mode_BluetoothSetting.h'
