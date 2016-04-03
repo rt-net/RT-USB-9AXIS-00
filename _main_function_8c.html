@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>RT-USB-9AXIS-00: MainFunction.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-USB-9AXIS-00
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="modules.html"><span>モジュール</span></a></li>
+      <li><a href="annotated.html"><span>データ構造</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>大域各種</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_main_function_8c.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">MainFunction.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>データの送信を行う<br />
+ 10msec毎に割り込み関数で処理を実行  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;LPC13xx.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="core__cm3_8h_source.html">core_cm3.h</a>&quot;</code><br />
+<code>#include &quot;type.h&quot;</code><br />
+<code>#include &quot;timer.h&quot;</code><br />
+<code>#include &quot;pwm.h&quot;</code><br />
+<code>#include &quot;MainFunction.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_user_interface_8h_source.html">UserInterface.h</a>&quot;</code><br />
+<code>#include &quot;uart.h&quot;</code><br />
+<code>#include &quot;SystemTickTimer.h&quot;</code><br />
+<code>#include &quot;mpu9250.h&quot;</code><br />
+<code>#include &quot;debug.h&quot;</code><br />
+<code>#include &quot;tinyMathFunction.h&quot;</code><br />
+<code>#include &quot;usbTransmission.h&quot;</code><br />
+<code>#include &quot;EEPROM_24LC16BT_I.h&quot;</code><br />
+</div>
+<p><a href="_main_function_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:aca26a4f4a9af167d156b9056a348cda7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_main_function_8c.html#aca26a4f4a9af167d156b9056a348cda7">startTimerInterruptMainFunction</a> (void)</td></tr>
+<tr class="separator:aca26a4f4a9af167d156b9056a348cda7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9a35976424c56c00f2cdf65678f4b60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_main_function_8c.html#ab9a35976424c56c00f2cdf65678f4b60">stopTimerInterruptMainFunction</a> (void)</td></tr>
+<tr class="separator:ab9a35976424c56c00f2cdf65678f4b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ff919bbe2bc33306db409cd474705f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_main_function_8c.html#a74ff919bbe2bc33306db409cd474705f">setSendDataEnable</a> (uint8_t en)</td></tr>
+<tr class="separator:a74ff919bbe2bc33306db409cd474705f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa03cf5328ae01a415d330c002fe659fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_main_function_8c.html#aa03cf5328ae01a415d330c002fe659fa">writeEEPROMOutputMode</a> (uint8_t mode)</td></tr>
+<tr class="separator:aa03cf5328ae01a415d330c002fe659fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91749b4160fbf9df3f1535a1af3982e3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_main_function_8c.html#a91749b4160fbf9df3f1535a1af3982e3">readEEPROMOutputMode</a> (void)</td></tr>
+<tr class="separator:a91749b4160fbf9df3f1535a1af3982e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d010a21d60102538dcedc2b42aa022d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_main_function_8c.html#a8d010a21d60102538dcedc2b42aa022d">setOutputMode</a> (uint8_t mode)</td></tr>
+<tr class="separator:a8d010a21d60102538dcedc2b42aa022d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a722d97fdabdf6a349b0ad02c82da1d23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_main_function_8c.html#a722d97fdabdf6a349b0ad02c82da1d23">TIMER32_1_IRQHandler</a> (void)</td></tr>
+<tr class="separator:a722d97fdabdf6a349b0ad02c82da1d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>データの送信を行う<br />
+ 10msec毎に割り込み関数で処理を実行 </p>
+<dl class="section author"><dt>著者</dt><dd>RTCorp. Ryota Takahashi </dd></dl>
+
+<p> <a class="el" href="_main_function_8c_source.html">MainFunction.c</a> に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="a91749b4160fbf9df3f1535a1af3982e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t readEEPROMOutputMode </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>EEPROMから出力モードを読み出す<br />
+</p>
+<dl class="section return"><dt>戻り値</dt><dd>EEPROMから読み出したモードの値 </dd></dl>
+
+<p> <a class="el" href="_main_function_8c_source.html">MainFunction.c</a> の <a class="el" href="_main_function_8c_source.html#l00082">82</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d010a21d60102538dcedc2b42aa022d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setOutputMode </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>アウトプットモードをセットする.<br />
+</p><ul>
+<li>OUTPUT_MODE_57600_BINARY_9AXIS USBとUARTから9軸センサのデータをbinary形式で出力</li>
+<li>OUTPUT_MODE_USB_ASCII_9AXIS USBから9軸センサのデータをascii文字列,カンマ区切りで出力 </li>
+</ul>
+
+<p> <a class="el" href="_main_function_8c_source.html">MainFunction.c</a> の <a class="el" href="_main_function_8c_source.html#l00092">92</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="a74ff919bbe2bc33306db409cd474705f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setSendDataEnable </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>en</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>機体データの送信をするかどうかを選択</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">en</td><td>1:送信 0:送信じ禁止 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p> <a class="el" href="_main_function_8c_source.html">MainFunction.c</a> の <a class="el" href="_main_function_8c_source.html#l00063">63</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="aca26a4f4a9af167d156b9056a348cda7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void startTimerInterruptMainFunction </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>MainFunction.c内の関数を使用できるようにする<br />
+ MainFunction.c内に記述されている割り込み関数 <a class="el" href="_main_function_8c.html#a722d97fdabdf6a349b0ad02c82da1d23">TIMER32_1_IRQHandler()</a>を有効にする.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p> <a class="el" href="_main_function_8c_source.html">MainFunction.c</a> の <a class="el" href="_main_function_8c_source.html#l00039">39</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab9a35976424c56c00f2cdf65678f4b60"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stopTimerInterruptMainFunction </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>MainFunction.c内の関数を使用できるようにする<br />
+ MainFunction.c内に記述されている割り込み関数 <a class="el" href="_main_function_8c.html#a722d97fdabdf6a349b0ad02c82da1d23">TIMER32_1_IRQHandler()</a>を停止させる.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p> <a class="el" href="_main_function_8c_source.html">MainFunction.c</a> の <a class="el" href="_main_function_8c_source.html#l00052">52</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="a722d97fdabdf6a349b0ad02c82da1d23"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TIMER32_1_IRQHandler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>10msec毎に行われる処理 <br />
+ 各種情報をUART,USBで送信   </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p> <a class="el" href="_main_function_8c_source.html">MainFunction.c</a> の <a class="el" href="_main_function_8c_source.html#l00117">117</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa03cf5328ae01a415d330c002fe659fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void writeEEPROMOutputMode </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>EEPROMに出力モードを書き込む<br />
+</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>書き込む動作モード </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="_main_function_8c_source.html">MainFunction.c</a> の <a class="el" href="_main_function_8c_source.html#l00073">73</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_ad635e0b54047e9d97f96a9423dca55a.html">RT-USB-9AXIS-sample</a></li><li class="navelem"><a class="el" href="dir_d555529c9ef3f537f85872409495b9bc.html">src</a></li><li class="navelem"><a class="el" href="dir_e3499cc9c37d9551c03cf6725a7c5a8f.html">MAIN</a></li><li class="navelem"><a class="el" href="_main_function_8c.html">MainFunction.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

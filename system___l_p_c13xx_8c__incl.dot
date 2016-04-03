@@ -1,0 +1,16 @@
+digraph "system_LPC13xx.c"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="system_LPC13xx.c",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="stdint.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="LPC13xx.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_l_p_c13xx_8h_source.html"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="core_cm3.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_c_m_s_i_sv1p30___l_p_c13xx_2inc_2core__cm3_8h_source.html"];
+  Node4 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="system_LPC13xx.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$system___l_p_c13xx_8h.html",tooltip="CMSIS Cortex-M3 Device Peripheral Access Layer Header File for the NXP LPC13xx Device Series..."];
+  Node5 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

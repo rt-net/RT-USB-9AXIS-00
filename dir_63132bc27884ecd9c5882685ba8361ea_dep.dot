@@ -1,0 +1,9 @@
+digraph "PERIPHERAL" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_14babbef02501ef66230d5c4b5de50f6 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="inc" fontname="Helvetica", fontsize="10", URL="dir_14babbef02501ef66230d5c4b5de50f6.html"]
+  dir_63132bc27884ecd9c5882685ba8361ea [shape=box, label="PERIPHERAL", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_63132bc27884ecd9c5882685ba8361ea.html"];
+  }
+}

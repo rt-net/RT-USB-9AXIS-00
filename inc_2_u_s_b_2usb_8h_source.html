@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>RT-USB-9AXIS-00: usb.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-USB-9AXIS-00
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="modules.html"><span>モジュール</span></a></li>
+      <li><a href="annotated.html"><span>データ構造</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>大域各種</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ad635e0b54047e9d97f96a9423dca55a.html">RT-USB-9AXIS-sample</a></li><li class="navelem"><a class="el" href="dir_790c9f26b36064904d68ef41f7f5cb07.html">inc</a></li><li class="navelem"><a class="el" href="dir_6a926af25838dee642e4a5629c4fc266.html">USB</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">inc/USB/usb.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *      U S B  -  K e r n e l</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Name:    usb.h</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Purpose: USB Definitions</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Version: V1.20</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *      This software is supplied &quot;AS IS&quot; without any warranties, express,</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *      implied or statutory, including but not limited to the implied</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *      warranties of fitness for purpose, satisfactory quality and</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *      noninfringement. Keil extends you a royalty-free right to reproduce</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *      and distribute executable files created using this software for use</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *      on NXP Semiconductors LPC microcontroller devices only. Nothing else </span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *      gives you the right to use this software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * Copyright (c) 2009 Keil - An ARM Company. All rights reserved.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *---------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef __USB_H__</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define __USB_H__</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="union____attribute____.html">   23</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">union </span>{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  uint16_t W;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    uint8_t L;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    uint8_t H;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  } <a class="code" href="union____attribute____.html">__attribute__</a>((packed)) WB;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;} <a class="code" href="union____attribute____.html">__attribute__</a>((packed)) WORD_BYTE;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">/* bmRequestType.Dir */</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define REQUEST_HOST_TO_DEVICE     0</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define REQUEST_DEVICE_TO_HOST     1</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/* bmRequestType.Type */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define REQUEST_STANDARD           0</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define REQUEST_CLASS              1</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define REQUEST_VENDOR             2</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define REQUEST_RESERVED           3</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">/* bmRequestType.Recipient */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define REQUEST_TO_DEVICE          0</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#define REQUEST_TO_INTERFACE       1</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define REQUEST_TO_ENDPOINT        2</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#define REQUEST_TO_OTHER           3</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">/* bmRequestType Definition */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="union___r_e_q_u_e_s_t___t_y_p_e.html">   49</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">union </span><a class="code" href="union___r_e_q_u_e_s_t___t_y_p_e.html">_REQUEST_TYPE</a> {</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="struct___r_e_q_u_e_s_t___t_y_p_e_1_1___b_m.html">   50</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="struct___r_e_q_u_e_s_t___t_y_p_e_1_1___b_m.html">_BM</a> {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    uint8_t Recipient : 5;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    uint8_t Type      : 2;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    uint8_t Dir       : 1;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  } <a class="code" href="union____attribute____.html">__attribute__</a>((packed)) BM;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  uint8_t B;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;} <a class="code" href="union____attribute____.html">__attribute__</a>((packed)) REQUEST_TYPE;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">/* USB Standard Request Codes */</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#define USB_REQUEST_GET_STATUS                 0</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#define USB_REQUEST_CLEAR_FEATURE              1</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="struct___b_m.html">   61</a></span>&#160;<span class="preprocessor">#define USB_REQUEST_SET_FEATURE                3</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#define USB_REQUEST_SET_ADDRESS                5</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#define USB_REQUEST_GET_DESCRIPTOR             6</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#define USB_REQUEST_SET_DESCRIPTOR             7</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#define USB_REQUEST_GET_CONFIGURATION          8</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#define USB_REQUEST_SET_CONFIGURATION          9</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#define USB_REQUEST_GET_INTERFACE              10</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#define USB_REQUEST_SET_INTERFACE              11</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#define USB_REQUEST_SYNC_FRAME                 12</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">/* USB GET_STATUS Bit Values */</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#define USB_GETSTATUS_SELF_POWERED             0x01</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#define USB_GETSTATUS_REMOTE_WAKEUP            0x02</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#define USB_GETSTATUS_ENDPOINT_STALL           0x01</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">/* USB Standard Feature selectors */</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#define USB_FEATURE_ENDPOINT_STALL             0</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#define USB_FEATURE_REMOTE_WAKEUP              1</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">/* USB Default Control Pipe Setup Packet */</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="struct___u_s_b___s_e_t_u_p___p_a_c_k_e_t.html">   81</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct___u_s_b___s_e_t_u_p___p_a_c_k_e_t.html">_USB_SETUP_PACKET</a> {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  REQUEST_TYPE bmRequestType;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  uint8_t      bRequest;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  WORD_BYTE    wValue;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  WORD_BYTE    wIndex;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  uint16_t     wLength;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;} <a class="code" href="union____attribute____.html">__attribute__</a>((packed)) USB_SETUP_PACKET;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">/* USB Descriptor Types */</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#define USB_DEVICE_DESCRIPTOR_TYPE             1</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#define USB_CONFIGURATION_DESCRIPTOR_TYPE      2</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#define USB_STRING_DESCRIPTOR_TYPE             3</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#define USB_INTERFACE_DESCRIPTOR_TYPE          4</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_DESCRIPTOR_TYPE           5</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#define USB_DEVICE_QUALIFIER_DESCRIPTOR_TYPE   6</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#define USB_OTHER_SPEED_CONFIG_DESCRIPTOR_TYPE 7</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#define USB_INTERFACE_POWER_DESCRIPTOR_TYPE    8</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#define USB_OTG_DESCRIPTOR_TYPE                     9</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#define USB_DEBUG_DESCRIPTOR_TYPE                  10</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#define USB_INTERFACE_ASSOCIATION_DESCRIPTOR_TYPE  11 </span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">/* USB Device Classes */</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#define USB_DEVICE_CLASS_RESERVED              0x00</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#define USB_DEVICE_CLASS_AUDIO                 0x01</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#define USB_DEVICE_CLASS_COMMUNICATIONS        0x02</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#define USB_DEVICE_CLASS_HUMAN_INTERFACE       0x03</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#define USB_DEVICE_CLASS_MONITOR               0x04</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#define USB_DEVICE_CLASS_PHYSICAL_INTERFACE    0x05</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#define USB_DEVICE_CLASS_POWER                 0x06</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#define USB_DEVICE_CLASS_PRINTER               0x07</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#define USB_DEVICE_CLASS_STORAGE               0x08</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#define USB_DEVICE_CLASS_HUB                   0x09</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#define USB_DEVICE_CLASS_MISCELLANEOUS         0xEF</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#define USB_DEVICE_CLASS_VENDOR_SPECIFIC       0xFF</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">/* bmAttributes in Configuration Descriptor */</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#define USB_CONFIG_POWERED_MASK                0x40</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#define USB_CONFIG_BUS_POWERED                 0x80</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#define USB_CONFIG_SELF_POWERED                0xC0</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#define USB_CONFIG_REMOTE_WAKEUP               0x20</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">/* bMaxPower in Configuration Descriptor */</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#define USB_CONFIG_POWER_MA(mA)                ((mA)/2)</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">/* bEndpointAddress in Endpoint Descriptor */</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_DIRECTION_MASK            0x80</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_OUT(addr)                 ((addr) | 0x00)</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_IN(addr)                  ((addr) | 0x80)</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">/* bmAttributes in Endpoint Descriptor */</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_TYPE_MASK                 0x03</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_TYPE_CONTROL              0x00</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_TYPE_ISOCHRONOUS          0x01</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_TYPE_BULK                 0x02</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_TYPE_INTERRUPT            0x03</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_SYNC_MASK                 0x0C</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_SYNC_NO_SYNCHRONIZATION   0x00</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_SYNC_ASYNCHRONOUS         0x04</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_SYNC_ADAPTIVE             0x08</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_SYNC_SYNCHRONOUS          0x0C</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_USAGE_MASK                0x30</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_USAGE_DATA                0x00</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_USAGE_FEEDBACK            0x10</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_USAGE_IMPLICIT_FEEDBACK   0x20</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">#define USB_ENDPOINT_USAGE_RESERVED            0x30</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment">/* USB Standard Device Descriptor */</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="struct___u_s_b___d_e_v_i_c_e___d_e_s_c_r_i_p_t_o_r.html">  149</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct___u_s_b___d_e_v_i_c_e___d_e_s_c_r_i_p_t_o_r.html">_USB_DEVICE_DESCRIPTOR</a> {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  uint8_t  bLength;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  uint8_t  bDescriptorType;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  uint16_t bcdUSB;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  uint8_t  bDeviceClass;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  uint8_t  bDeviceSubClass;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  uint8_t  bDeviceProtocol;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  uint8_t  bMaxPacketSize0;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  uint16_t idVendor;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  uint16_t idProduct;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  uint16_t bcdDevice;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  uint8_t  iManufacturer;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  uint8_t  iProduct;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  uint8_t  iSerialNumber;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  uint8_t  bNumConfigurations;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;} <a class="code" href="union____attribute____.html">__attribute__</a>((packed)) USB_DEVICE_DESCRIPTOR;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment">/* USB 2.0 Device Qualifier Descriptor */</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="struct___u_s_b___d_e_v_i_c_e___q_u_a_l_i_f_i_e_r___d_e_s_c_r_i_p_t_o_r.html">  167</a></span>&#160;typedef struct <a class="code" href="struct___u_s_b___d_e_v_i_c_e___q_u_a_l_i_f_i_e_r___d_e_s_c_r_i_p_t_o_r.html">_USB_DEVICE_QUALIFIER_DESCRIPTOR</a> {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  uint8_t  bLength;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  uint8_t  bDescriptorType;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  uint16_t bcdUSB;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  uint8_t  bDeviceClass;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  uint8_t  bDeviceSubClass;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  uint8_t  bDeviceProtocol;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  uint8_t  bMaxPacketSize0;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  uint8_t  bNumConfigurations;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  uint8_t  bReserved;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;} <a class="code" href="union____attribute____.html">__attribute__</a>((packed)) USB_DEVICE_QUALIFIER_DESCRIPTOR;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">/* USB Standard Configuration Descriptor */</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="struct___u_s_b___c_o_n_f_i_g_u_r_a_t_i_o_n___d_e_s_c_r_i_p_t_o_r.html">  180</a></span>&#160;typedef struct <a class="code" href="struct___u_s_b___c_o_n_f_i_g_u_r_a_t_i_o_n___d_e_s_c_r_i_p_t_o_r.html">_USB_CONFIGURATION_DESCRIPTOR</a> {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  uint8_t  bLength;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  uint8_t  bDescriptorType;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  uint16_t wTotalLength;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  uint8_t  bNumInterfaces;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  uint8_t  bConfigurationValue;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  uint8_t  iConfiguration;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  uint8_t  bmAttributes;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  uint8_t  bMaxPower;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;} <a class="code" href="union____attribute____.html">__attribute__</a>((packed)) USB_CONFIGURATION_DESCRIPTOR;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">/* USB Standard Interface Descriptor */</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="struct___u_s_b___i_n_t_e_r_f_a_c_e___d_e_s_c_r_i_p_t_o_r.html">  192</a></span>&#160;typedef struct <a class="code" href="struct___u_s_b___i_n_t_e_r_f_a_c_e___d_e_s_c_r_i_p_t_o_r.html">_USB_INTERFACE_DESCRIPTOR</a> {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  uint8_t  bLength;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  uint8_t  bDescriptorType;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  uint8_t  bInterfaceNumber;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  uint8_t  bAlternateSetting;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  uint8_t  bNumEndpoints;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  uint8_t  bInterfaceClass;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  uint8_t  bInterfaceSubClass;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  uint8_t  bInterfaceProtocol;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  uint8_t  iInterface;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;} <a class="code" href="union____attribute____.html">__attribute__</a>((packed)) USB_INTERFACE_DESCRIPTOR;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment">/* USB Standard Endpoint Descriptor */</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="struct___u_s_b___e_n_d_p_o_i_n_t___d_e_s_c_r_i_p_t_o_r.html">  205</a></span>&#160;typedef struct <a class="code" href="struct___u_s_b___e_n_d_p_o_i_n_t___d_e_s_c_r_i_p_t_o_r.html">_USB_ENDPOINT_DESCRIPTOR</a> {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  uint8_t  bLength;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  uint8_t  bDescriptorType;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  uint8_t  bEndpointAddress;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  uint8_t  bmAttributes;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  uint16_t wMaxPacketSize;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  uint8_t  bInterval;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;} <a class="code" href="union____attribute____.html">__attribute__</a>((packed)) USB_ENDPOINT_DESCRIPTOR;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment">/* USB String Descriptor */</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="struct___u_s_b___s_t_r_i_n_g___d_e_s_c_r_i_p_t_o_r.html">  215</a></span>&#160;typedef struct <a class="code" href="struct___u_s_b___s_t_r_i_n_g___d_e_s_c_r_i_p_t_o_r.html">_USB_STRING_DESCRIPTOR</a> {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  uint8_t  bLength;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  uint8_t  bDescriptorType;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  uint16_t bString<span class="comment">/*[]*/</span>;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;} <a class="code" href="union____attribute____.html">__attribute__</a>((packed)) USB_STRING_DESCRIPTOR;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment">/* USB Common Descriptor */</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="struct___u_s_b___c_o_m_m_o_n___d_e_s_c_r_i_p_t_o_r.html">  222</a></span>&#160;typedef struct <a class="code" href="struct___u_s_b___c_o_m_m_o_n___d_e_s_c_r_i_p_t_o_r.html">_USB_COMMON_DESCRIPTOR</a> {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  uint8_t  bLength;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  uint8_t  bDescriptorType;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;} <a class="code" href="union____attribute____.html">__attribute__</a>((packed)) USB_COMMON_DESCRIPTOR;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* __USB_H__ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="struct___u_s_b___s_e_t_u_p___p_a_c_k_e_t_html"><div class="ttname"><a href="struct___u_s_b___s_e_t_u_p___p_a_c_k_e_t.html">_USB_SETUP_PACKET</a></div><div class="ttdef"><b>Definition:</b> <a href="inc_2_u_s_b_2usb_8h_source.html#l00081">inc/USB/usb.h:81</a></div></div>
+<div class="ttc" id="struct___u_s_b___d_e_v_i_c_e___d_e_s_c_r_i_p_t_o_r_html"><div class="ttname"><a href="struct___u_s_b___d_e_v_i_c_e___d_e_s_c_r_i_p_t_o_r.html">_USB_DEVICE_DESCRIPTOR</a></div><div class="ttdef"><b>Definition:</b> <a href="inc_2_u_s_b_2usb_8h_source.html#l00149">inc/USB/usb.h:149</a></div></div>
+<div class="ttc" id="struct___u_s_b___s_t_r_i_n_g___d_e_s_c_r_i_p_t_o_r_html"><div class="ttname"><a href="struct___u_s_b___s_t_r_i_n_g___d_e_s_c_r_i_p_t_o_r.html">_USB_STRING_DESCRIPTOR</a></div><div class="ttdef"><b>Definition:</b> <a href="inc_2_u_s_b_2usb_8h_source.html#l00215">inc/USB/usb.h:215</a></div></div>
+<div class="ttc" id="union____attribute_____html"><div class="ttname"><a href="union____attribute____.html">__attribute__</a></div><div class="ttdef"><b>Definition:</b> <a href="inc_2_u_s_b_2usb_8h_source.html#l00023">inc/USB/usb.h:23</a></div></div>
+<div class="ttc" id="struct___u_s_b___i_n_t_e_r_f_a_c_e___d_e_s_c_r_i_p_t_o_r_html"><div class="ttname"><a href="struct___u_s_b___i_n_t_e_r_f_a_c_e___d_e_s_c_r_i_p_t_o_r.html">_USB_INTERFACE_DESCRIPTOR</a></div><div class="ttdef"><b>Definition:</b> <a href="inc_2_u_s_b_2usb_8h_source.html#l00192">inc/USB/usb.h:192</a></div></div>
+<div class="ttc" id="struct___u_s_b___c_o_n_f_i_g_u_r_a_t_i_o_n___d_e_s_c_r_i_p_t_o_r_html"><div class="ttname"><a href="struct___u_s_b___c_o_n_f_i_g_u_r_a_t_i_o_n___d_e_s_c_r_i_p_t_o_r.html">_USB_CONFIGURATION_DESCRIPTOR</a></div><div class="ttdef"><b>Definition:</b> <a href="inc_2_u_s_b_2usb_8h_source.html#l00180">inc/USB/usb.h:180</a></div></div>
+<div class="ttc" id="struct___u_s_b___d_e_v_i_c_e___q_u_a_l_i_f_i_e_r___d_e_s_c_r_i_p_t_o_r_html"><div class="ttname"><a href="struct___u_s_b___d_e_v_i_c_e___q_u_a_l_i_f_i_e_r___d_e_s_c_r_i_p_t_o_r.html">_USB_DEVICE_QUALIFIER_DESCRIPTOR</a></div><div class="ttdef"><b>Definition:</b> <a href="inc_2_u_s_b_2usb_8h_source.html#l00167">inc/USB/usb.h:167</a></div></div>
+<div class="ttc" id="struct___u_s_b___c_o_m_m_o_n___d_e_s_c_r_i_p_t_o_r_html"><div class="ttname"><a href="struct___u_s_b___c_o_m_m_o_n___d_e_s_c_r_i_p_t_o_r.html">_USB_COMMON_DESCRIPTOR</a></div><div class="ttdef"><b>Definition:</b> <a href="inc_2_u_s_b_2usb_8h_source.html#l00222">inc/USB/usb.h:222</a></div></div>
+<div class="ttc" id="union___r_e_q_u_e_s_t___t_y_p_e_html"><div class="ttname"><a href="union___r_e_q_u_e_s_t___t_y_p_e.html">_REQUEST_TYPE</a></div><div class="ttdef"><b>Definition:</b> <a href="inc_2_u_s_b_2usb_8h_source.html#l00049">inc/USB/usb.h:49</a></div></div>
+<div class="ttc" id="struct___r_e_q_u_e_s_t___t_y_p_e_1_1___b_m_html"><div class="ttname"><a href="struct___r_e_q_u_e_s_t___t_y_p_e_1_1___b_m.html">_REQUEST_TYPE::_BM</a></div><div class="ttdef"><b>Definition:</b> <a href="inc_2_u_s_b_2usb_8h_source.html#l00050">inc/USB/usb.h:50</a></div></div>
+<div class="ttc" id="struct___u_s_b___e_n_d_p_o_i_n_t___d_e_s_c_r_i_p_t_o_r_html"><div class="ttname"><a href="struct___u_s_b___e_n_d_p_o_i_n_t___d_e_s_c_r_i_p_t_o_r.html">_USB_ENDPOINT_DESCRIPTOR</a></div><div class="ttdef"><b>Definition:</b> <a href="inc_2_u_s_b_2usb_8h_source.html#l00205">inc/USB/usb.h:205</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

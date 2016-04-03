@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>RT-USB-9AXIS-00: mpu9250.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-USB-9AXIS-00
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="modules.html"><span>モジュール</span></a></li>
+      <li><a href="annotated.html"><span>データ構造</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>大域各種</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('mpu9250_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">mpu9250.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MPU9250_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MPU9250_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#af5ba140727514d78380957728fb85858">initMPU9250</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a92d3fbffdf08a1e1f34704118cd70ad5">initAK8963</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a386e4bbff734d4a43941b35205942cfe">updateMPU9250Data</a>();</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a862a4101d94d72d8b132ec0a0862eae9">updateAK8963Data</a>();</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a466eb88f64c8c1b064b56a36f6386cf8">getDataFromMPU9250</a> (uint8_t *dest_array);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#aee86ce4d1f3ddc7b48689833de2741c2">getDataFromAK8963</a> (uint8_t *dest_array);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a0a46669bada588b92e12a664eb056db5">whoAmI</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#aa434e4a617768a7869cbaea0355911c0">getOmega</a>(<span class="keywordtype">float</span> *vec);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a83c4db4d92572802f8c5b365abc67d5f">getMag</a>(<span class="keywordtype">float</span> *vec);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#ad89d8ce61d6a3d9d3ee69d87c9cf3ad9">getAcc</a>(<span class="keywordtype">float</span> *vec);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a9f254dc0089216a5fcb41c2b5775aef3">getTemp</a>(<span class="keywordtype">float</span> *temp);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a3a62f6e50b129f8c6d66d8968d8fa17e">getOmegaOffset</a>(int16_t *vec);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a41680360a062a1d440278e8d285702df">getAccOffset</a>(int16_t *vec);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#ab52a35c603fd707b3a79f2a23b1cc0ab">getMagOffset</a>(int16_t *vec);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a40d06c240c4947becd9a4943462e9c21">setOmegaOffset</a>(int16_t *offset_vec);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#ad2394d8230cb7aa5589bf81779c6656d">setAccOffset</a>(int16_t *offset_vec);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a14285e916ce2c0c1e004ac723c7e6790">setMagOffset</a>(int16_t *offset_vec);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#ac312453b0a69a0dcd8d47f32e6e28903">setOmegaOffset_x</a>(int16_t offset_x);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a5d85479387fba0300cee7dc35010f431">setOmegaOffset_y</a>(int16_t offset_y);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a958ea458765a69f753ca148e4e305522">setOmegaOffset_z</a>(int16_t offset_z);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a73f5c76733ac8a4754ca5d35b74e2955">setAccOffset_x</a>(int16_t offset_x);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a27c154b1eee739041685dc4ba50bf041">setAccOffset_y</a>(int16_t offset_y);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a9779ae809a7a7b714764440750567867">setAccOffset_z</a>(int16_t offset_z);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a8f2053aec9f03b8ee34453fdc976c24f">setMagOffset_x</a>(int16_t offset_x);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a45048df805149271aabde667a7ab4fbd">setMagOffset_y</a>(int16_t offset_y);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#adee23fa4395843329978d7ac718f98e4">setMagOffset_z</a>(int16_t offset_z);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#af90b27d3bccbaaa4a097f7512b213906">getAsa</a>(int16_t *vec);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a5d4b6718426b08bf189bd07a3d5a8410">getOmegaInt</a>(int16_t *vec);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#aae7371cbc5dcb20a4bb7628c36927190">getACCInt</a>(int16_t *vec);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a24cd07f1fab308a22957eb16f37f4964">getMagInt</a>(int16_t *vec);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a2ae879ac222c8f5f151bd8c237ceac20">getTempInt</a>(int16_t *temp);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a2033de9f801464077632f7c50ed2a815">getRawOmegaInt</a>(int16_t *vec);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a4778256960c284ec53e07f0ac87de175">getRawAccInt</a>(int16_t *vec);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a0a70690cc6cfd39d092933ec636c4efe">getRawMagInt</a>(int16_t *vec);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a66fe0cab3f50ba04b64d4ca445c9a9ab">getRawTempInt</a>(int16_t *temp);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#aea621c3bd939239e2c5f94f6f7175c29">calibOmegaOffset</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a9eef64db027967c6e2e8b1966d75012a">calibAccXYOffset</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a85742cc73a6a0d8fcd9a513ea54636bf">calibAccZOffset</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a607053eb2ff3c2ed00e56ae995fd45ac">calibMagOffset</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a2c74a170b91fa6bef07054c2037490c5">debugMPU9250</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#ae614aca57612ac1158164a1ab6f73ca3">writeEEPROMOffsetAccInt</a>(int16_t *vec);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#aba705c4f603e68a4b0a6763050f384a0">writeEEPROMOffsetOmegaInt</a>(int16_t *vec);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#af1ca931e223bcce03fb992224fc18596">writeEEPROMOffsetMagInt</a>(int16_t *vec);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a0210711108d4042649f4fd338acac85e">readEEPROMOffsetAccInt</a>(int16_t *vec);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#ab4139a9d25ca39d26e60d6d7d7c744a4">readEEPROMOffsetOmegaInt</a>(int16_t *vec);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a9cdfa564e571990552ebacf18f76416e">readEEPROMOffsetMagInt</a>(int16_t *vec);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mpu9250_8c.html#a497db0f06ddaa6cb49582485abfbb05b">initOffsetByEEPROM</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="mpu9250_8c_html_a4778256960c284ec53e07f0ac87de175"><div class="ttname"><a href="mpu9250_8c.html#a4778256960c284ec53e07f0ac87de175">getRawAccInt</a></div><div class="ttdeci">void getRawAccInt(int16_t *vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00724">mpu9250.c:724</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a66fe0cab3f50ba04b64d4ca445c9a9ab"><div class="ttname"><a href="mpu9250_8c.html#a66fe0cab3f50ba04b64d4ca445c9a9ab">getRawTempInt</a></div><div class="ttdeci">void getRawTempInt(int16_t *temp)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00746">mpu9250.c:746</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_af90b27d3bccbaaa4a097f7512b213906"><div class="ttname"><a href="mpu9250_8c.html#af90b27d3bccbaaa4a097f7512b213906">getAsa</a></div><div class="ttdeci">void getAsa(int16_t *vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00659">mpu9250.c:659</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_ac312453b0a69a0dcd8d47f32e6e28903"><div class="ttname"><a href="mpu9250_8c.html#ac312453b0a69a0dcd8d47f32e6e28903">setOmegaOffset_x</a></div><div class="ttdeci">void setOmegaOffset_x(int16_t offset_x)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00569">mpu9250.c:569</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a24cd07f1fab308a22957eb16f37f4964"><div class="ttname"><a href="mpu9250_8c.html#a24cd07f1fab308a22957eb16f37f4964">getMagInt</a></div><div class="ttdeci">void getMagInt(int16_t *vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00692">mpu9250.c:692</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a958ea458765a69f753ca148e4e305522"><div class="ttname"><a href="mpu9250_8c.html#a958ea458765a69f753ca148e4e305522">setOmegaOffset_z</a></div><div class="ttdeci">void setOmegaOffset_z(int16_t offset_z)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00589">mpu9250.c:589</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_adee23fa4395843329978d7ac718f98e4"><div class="ttname"><a href="mpu9250_8c.html#adee23fa4395843329978d7ac718f98e4">setMagOffset_z</a></div><div class="ttdeci">void setMagOffset_z(int16_t offset_z)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00649">mpu9250.c:649</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a27c154b1eee739041685dc4ba50bf041"><div class="ttname"><a href="mpu9250_8c.html#a27c154b1eee739041685dc4ba50bf041">setAccOffset_y</a></div><div class="ttdeci">void setAccOffset_y(int16_t offset_y)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00609">mpu9250.c:609</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a497db0f06ddaa6cb49582485abfbb05b"><div class="ttname"><a href="mpu9250_8c.html#a497db0f06ddaa6cb49582485abfbb05b">initOffsetByEEPROM</a></div><div class="ttdeci">void initOffsetByEEPROM()</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l01040">mpu9250.c:1040</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a2c74a170b91fa6bef07054c2037490c5"><div class="ttname"><a href="mpu9250_8c.html#a2c74a170b91fa6bef07054c2037490c5">debugMPU9250</a></div><div class="ttdeci">void debugMPU9250(void)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00938">mpu9250.c:938</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_af5ba140727514d78380957728fb85858"><div class="ttname"><a href="mpu9250_8c.html#af5ba140727514d78380957728fb85858">initMPU9250</a></div><div class="ttdeci">void initMPU9250(void)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00072">mpu9250.c:72</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_af1ca931e223bcce03fb992224fc18596"><div class="ttname"><a href="mpu9250_8c.html#af1ca931e223bcce03fb992224fc18596">writeEEPROMOffsetMagInt</a></div><div class="ttdeci">void writeEEPROMOffsetMagInt(int16_t *vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l01001">mpu9250.c:1001</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a9eef64db027967c6e2e8b1966d75012a"><div class="ttname"><a href="mpu9250_8c.html#a9eef64db027967c6e2e8b1966d75012a">calibAccXYOffset</a></div><div class="ttdeci">void calibAccXYOffset()</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00813">mpu9250.c:813</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a5d4b6718426b08bf189bd07a3d5a8410"><div class="ttname"><a href="mpu9250_8c.html#a5d4b6718426b08bf189bd07a3d5a8410">getOmegaInt</a></div><div class="ttdeci">void getOmegaInt(int16_t *vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00670">mpu9250.c:670</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_aea621c3bd939239e2c5f94f6f7175c29"><div class="ttname"><a href="mpu9250_8c.html#aea621c3bd939239e2c5f94f6f7175c29">calibOmegaOffset</a></div><div class="ttdeci">void calibOmegaOffset(int16_t *offset_vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00760">mpu9250.c:760</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a73f5c76733ac8a4754ca5d35b74e2955"><div class="ttname"><a href="mpu9250_8c.html#a73f5c76733ac8a4754ca5d35b74e2955">setAccOffset_x</a></div><div class="ttdeci">void setAccOffset_x(int16_t offset_x)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00599">mpu9250.c:599</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a2ae879ac222c8f5f151bd8c237ceac20"><div class="ttname"><a href="mpu9250_8c.html#a2ae879ac222c8f5f151bd8c237ceac20">getTempInt</a></div><div class="ttdeci">void getTempInt(int16_t *temp)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00703">mpu9250.c:703</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a85742cc73a6a0d8fcd9a513ea54636bf"><div class="ttname"><a href="mpu9250_8c.html#a85742cc73a6a0d8fcd9a513ea54636bf">calibAccZOffset</a></div><div class="ttdeci">void calibAccZOffset()</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00857">mpu9250.c:857</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_aba705c4f603e68a4b0a6763050f384a0"><div class="ttname"><a href="mpu9250_8c.html#aba705c4f603e68a4b0a6763050f384a0">writeEEPROMOffsetOmegaInt</a></div><div class="ttdeci">void writeEEPROMOffsetOmegaInt(int16_t *vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00989">mpu9250.c:989</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_ad2394d8230cb7aa5589bf81779c6656d"><div class="ttname"><a href="mpu9250_8c.html#ad2394d8230cb7aa5589bf81779c6656d">setAccOffset</a></div><div class="ttdeci">void setAccOffset(int16_t *offset_vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00547">mpu9250.c:547</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a466eb88f64c8c1b064b56a36f6386cf8"><div class="ttname"><a href="mpu9250_8c.html#a466eb88f64c8c1b064b56a36f6386cf8">getDataFromMPU9250</a></div><div class="ttdeci">void getDataFromMPU9250(uint8_t *dest_array)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00370">mpu9250.c:370</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a0a70690cc6cfd39d092933ec636c4efe"><div class="ttname"><a href="mpu9250_8c.html#a0a70690cc6cfd39d092933ec636c4efe">getRawMagInt</a></div><div class="ttdeci">void getRawMagInt(int16_t *vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00735">mpu9250.c:735</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a5d85479387fba0300cee7dc35010f431"><div class="ttname"><a href="mpu9250_8c.html#a5d85479387fba0300cee7dc35010f431">setOmegaOffset_y</a></div><div class="ttdeci">void setOmegaOffset_y(int16_t offset_y)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00579">mpu9250.c:579</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a92d3fbffdf08a1e1f34704118cd70ad5"><div class="ttname"><a href="mpu9250_8c.html#a92d3fbffdf08a1e1f34704118cd70ad5">initAK8963</a></div><div class="ttdeci">void initAK8963(void)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00136">mpu9250.c:136</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_ab52a35c603fd707b3a79f2a23b1cc0ab"><div class="ttname"><a href="mpu9250_8c.html#ab52a35c603fd707b3a79f2a23b1cc0ab">getMagOffset</a></div><div class="ttdeci">void getMagOffset(int16_t *offset_vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00525">mpu9250.c:525</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a40d06c240c4947becd9a4943462e9c21"><div class="ttname"><a href="mpu9250_8c.html#a40d06c240c4947becd9a4943462e9c21">setOmegaOffset</a></div><div class="ttdeci">void setOmegaOffset(int16_t *offset_vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00536">mpu9250.c:536</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a386e4bbff734d4a43941b35205942cfe"><div class="ttname"><a href="mpu9250_8c.html#a386e4bbff734d4a43941b35205942cfe">updateMPU9250Data</a></div><div class="ttdeci">void updateMPU9250Data(void)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00195">mpu9250.c:195</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a607053eb2ff3c2ed00e56ae995fd45ac"><div class="ttname"><a href="mpu9250_8c.html#a607053eb2ff3c2ed00e56ae995fd45ac">calibMagOffset</a></div><div class="ttdeci">void calibMagOffset()</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00894">mpu9250.c:894</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a41680360a062a1d440278e8d285702df"><div class="ttname"><a href="mpu9250_8c.html#a41680360a062a1d440278e8d285702df">getAccOffset</a></div><div class="ttdeci">void getAccOffset(int16_t *offset_vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00514">mpu9250.c:514</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a45048df805149271aabde667a7ab4fbd"><div class="ttname"><a href="mpu9250_8c.html#a45048df805149271aabde667a7ab4fbd">setMagOffset_y</a></div><div class="ttdeci">void setMagOffset_y(int16_t offset_y)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00639">mpu9250.c:639</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a3a62f6e50b129f8c6d66d8968d8fa17e"><div class="ttname"><a href="mpu9250_8c.html#a3a62f6e50b129f8c6d66d8968d8fa17e">getOmegaOffset</a></div><div class="ttdeci">void getOmegaOffset(int16_t *offset_vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00503">mpu9250.c:503</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a9779ae809a7a7b714764440750567867"><div class="ttname"><a href="mpu9250_8c.html#a9779ae809a7a7b714764440750567867">setAccOffset_z</a></div><div class="ttdeci">void setAccOffset_z(int16_t offset_z)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00619">mpu9250.c:619</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_ae614aca57612ac1158164a1ab6f73ca3"><div class="ttname"><a href="mpu9250_8c.html#ae614aca57612ac1158164a1ab6f73ca3">writeEEPROMOffsetAccInt</a></div><div class="ttdeci">void writeEEPROMOffsetAccInt(int16_t *vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00977">mpu9250.c:977</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a14285e916ce2c0c1e004ac723c7e6790"><div class="ttname"><a href="mpu9250_8c.html#a14285e916ce2c0c1e004ac723c7e6790">setMagOffset</a></div><div class="ttdeci">void setMagOffset(int16_t *offset_vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00558">mpu9250.c:558</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_ad89d8ce61d6a3d9d3ee69d87c9cf3ad9"><div class="ttname"><a href="mpu9250_8c.html#ad89d8ce61d6a3d9d3ee69d87c9cf3ad9">getAcc</a></div><div class="ttdeci">void getAcc(float *vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00481">mpu9250.c:481</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_ab4139a9d25ca39d26e60d6d7d7c744a4"><div class="ttname"><a href="mpu9250_8c.html#ab4139a9d25ca39d26e60d6d7d7c744a4">readEEPROMOffsetOmegaInt</a></div><div class="ttdeci">void readEEPROMOffsetOmegaInt(int16_t *vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l01019">mpu9250.c:1019</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_aa434e4a617768a7869cbaea0355911c0"><div class="ttname"><a href="mpu9250_8c.html#aa434e4a617768a7869cbaea0355911c0">getOmega</a></div><div class="ttdeci">void getOmega(float *vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00457">mpu9250.c:457</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a83c4db4d92572802f8c5b365abc67d5f"><div class="ttname"><a href="mpu9250_8c.html#a83c4db4d92572802f8c5b365abc67d5f">getMag</a></div><div class="ttdeci">void getMag(float *vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00469">mpu9250.c:469</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_aee86ce4d1f3ddc7b48689833de2741c2"><div class="ttname"><a href="mpu9250_8c.html#aee86ce4d1f3ddc7b48689833de2741c2">getDataFromAK8963</a></div><div class="ttdeci">void getDataFromAK8963(uint8_t *dest_array)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00393">mpu9250.c:393</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a862a4101d94d72d8b132ec0a0862eae9"><div class="ttname"><a href="mpu9250_8c.html#a862a4101d94d72d8b132ec0a0862eae9">updateAK8963Data</a></div><div class="ttdeci">void updateAK8963Data()</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00285">mpu9250.c:285</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a0a46669bada588b92e12a664eb056db5"><div class="ttname"><a href="mpu9250_8c.html#a0a46669bada588b92e12a664eb056db5">whoAmI</a></div><div class="ttdeci">void whoAmI(void)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00409">mpu9250.c:409</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_aae7371cbc5dcb20a4bb7628c36927190"><div class="ttname"><a href="mpu9250_8c.html#aae7371cbc5dcb20a4bb7628c36927190">getACCInt</a></div><div class="ttdeci">void getACCInt(int16_t *vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00681">mpu9250.c:681</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a9f254dc0089216a5fcb41c2b5775aef3"><div class="ttname"><a href="mpu9250_8c.html#a9f254dc0089216a5fcb41c2b5775aef3">getTemp</a></div><div class="ttdeci">void getTemp(float *temp)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00493">mpu9250.c:493</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a0210711108d4042649f4fd338acac85e"><div class="ttname"><a href="mpu9250_8c.html#a0210711108d4042649f4fd338acac85e">readEEPROMOffsetAccInt</a></div><div class="ttdeci">void readEEPROMOffsetAccInt(int16_t *vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l01010">mpu9250.c:1010</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a8f2053aec9f03b8ee34453fdc976c24f"><div class="ttname"><a href="mpu9250_8c.html#a8f2053aec9f03b8ee34453fdc976c24f">setMagOffset_x</a></div><div class="ttdeci">void setMagOffset_x(int16_t offset_x)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00629">mpu9250.c:629</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a9cdfa564e571990552ebacf18f76416e"><div class="ttname"><a href="mpu9250_8c.html#a9cdfa564e571990552ebacf18f76416e">readEEPROMOffsetMagInt</a></div><div class="ttdeci">void readEEPROMOffsetMagInt(int16_t *vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l01028">mpu9250.c:1028</a></div></div>
+<div class="ttc" id="mpu9250_8c_html_a2033de9f801464077632f7c50ed2a815"><div class="ttname"><a href="mpu9250_8c.html#a2033de9f801464077632f7c50ed2a815">getRawOmegaInt</a></div><div class="ttdeci">void getRawOmegaInt(int16_t *vec)</div><div class="ttdef"><b>Definition:</b> <a href="mpu9250_8c_source.html#l00713">mpu9250.c:713</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_ad635e0b54047e9d97f96a9423dca55a.html">RT-USB-9AXIS-sample</a></li><li class="navelem"><a class="el" href="dir_790c9f26b36064904d68ef41f7f5cb07.html">inc</a></li><li class="navelem"><a class="el" href="dir_121dbeb49b7f0c1c80c58c81ba8a2f4e.html">MAIN</a></li><li class="navelem"><b>mpu9250.h</b></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>
