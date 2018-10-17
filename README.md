@@ -1,4 +1,7 @@
 # RT-USB-9AXIS-00
+
+![9axis-imag](https://www.rt-net.jp/wp-content/uploads/2018/02/img-usb9s_01.png)
+
 本リポジトリはUSB出力9軸IMUセンサモジュールver2.0（以下、本製品）
 のサンプルプログラムおよびマニュアルをまとめたものです.  
 
@@ -55,8 +58,8 @@ http://www.rt-shop.jp/download/RT-IMU9/
 
 ver2.0のファームウェアには次のような機能があります.
 
- a. 各種センサの原点手動キャリビュレーションモード
- b. センサの出力をbinary形式かASCII形式か切り替え
+- 各種センサの原点手動キャリビュレーションモード
+- センサの出力をbinary形式かASCII形式か切り替え
  
 binary出力ではセンサデータはbyte列で送られてきます.  
 そのため, byte列を意味のあるデータに変換する必要が
