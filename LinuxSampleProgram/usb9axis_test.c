@@ -55,7 +55,7 @@ int read_data(int fd, unsigned char* buf, unsigned int buf_len) {
     while(left_len > 0) {
         //Read device file and put the data into buf (max size is (buf_len) bytes)
         int size = read(fd, p, left_len);
-        if(size < 0) {
+        if(size <= 0) {
             return -1;
         }
         p += size;
@@ -67,7 +67,7 @@ int read_data(int fd, unsigned char* buf, unsigned int buf_len) {
 
 
 int main(int argc, char **argv){
-    static char serial_port[128]="/dev/ttyACM0";
+    char serial_port[128]="/dev/ttyACM0";
     const int DATA_SIZE = 28;
 
     if(signal(SIGINT, abrt_handler) == SIG_ERR){
@@ -99,7 +99,6 @@ int main(int argc, char **argv){
         if(readDataSize != DATA_SIZE){
             if(readDataSize == -1){
                 printf("Read Failed : %s\n", serial_port);
-                perror("Error");
                 exit(1);
             }
             continue;
