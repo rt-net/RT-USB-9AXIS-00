@@ -1,6 +1,6 @@
 # RT-USB-9AXIS-00
 
-![9axis-imag](https://www.rt-net.jp/wp-content/uploads/2018/02/img-usb9s_01.png)
+![9axis-img](https://github.com/rt-net/images/blob/master/usb-9axisimu/usb-9axisimu.png?raw=true)
 
 本リポジトリはUSB出力9軸IMUセンサモジュールver2.0（以下、本製品）
 のサンプルプログラムおよびマニュアルをまとめたものです.  
@@ -21,10 +21,6 @@ LPCXpressoとはLPCマイコン(lpc1343)の統合開発環境です.
 
 以下のリンクからサンプルプログラムの説明ページに飛びます.
 http://rt-net.github.io/RT-USB-9AXIS-00
-
-
-## datasheet
-9軸センサMPU9250およびlpc1343マイコンのデータシートです.
 
 ## firmware 
 本製品のファームウェアです．
